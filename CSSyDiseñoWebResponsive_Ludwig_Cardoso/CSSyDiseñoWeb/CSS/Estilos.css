@@ -1,0 +1,263 @@
+body{
+    font-family: Dancing Script;
+    color :white;
+    background-color: #02010a;
+}
+
+#contenedor{
+  width: 900px;
+  margin:auto;
+}
+
+#encabezado{
+    background-color:#5b7989;
+    padding-top:5px;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    animation-name: encabezado-animacion;
+	  animation-duration: 1s;
+}
+
+@keyframes encabezado-animacion {
+	0% {
+    margin-top:150%;
+	}
+	60% {
+		margin-top:-5%;
+	}
+	100% {
+    margin-top: 0%;
+	}
+}
+header{
+  height: 50px;  
+}
+h1{
+    text-shadow: 1px 2px 3px #02010a;
+    display: inline;
+    margin-left:10px;
+}
+nav{
+    display: inline;
+    margin: 300px;
+}
+nav ul {
+    list-style: none;
+    display: inline;
+}
+nav a{
+    color: white;
+    }
+nav ul li{
+    display: inline;
+    padding: 5px;
+}
+#contenido{
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+.activa{
+  text-decoration: none;
+}
+
+#central{
+  background-color:#82c3a6;
+  text-align: center;
+}
+#central figure img{
+
+  margin:auto;
+  width: 700px;
+  height: 450px;
+
+}
+
+figure img{
+    box-shadow:2px 2px 2px #02010a;
+}
+#secundaria{
+  background-color:#d5c75f;
+  color:black;
+  display: flex;
+  flex-direction: row;
+}
+
+#secundaria figure {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  }
+
+#secundaria figure img{
+  border:1px solid;
+  width: 400px;
+  height: 300px;
+}
+
+#secundariaIzq img{
+	transition-property: transform, box-shadow;
+  transition-duration: 1s, 1s;
+}
+#secundariaIzq img:hover{
+    transform: rotate(10deg);
+    box-shadow: 2px 2px #82c3a6;
+}
+#secundariaDer img{
+	transition-property:  transform, border;
+  transition-duration: 1s, 1s;
+}
+#secundariaDer img:hover{
+  transform: translate(20px, -5px);
+  box-shadow: 2px 2px #82c3a6;
+}
+
+#galeria{
+  background-color:#d5c75f;  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#galeria img{/*tamaño imagenes galeria */
+  border:1px solid;  
+  width: 250px;
+  height: 150px;
+  margin:auto;  
+}
+.contenedorimg{  
+  
+  padding:10px;
+  display: flex;
+  flex-direction: row;
+}
+
+#imagen1{
+-webkit-filter: blur(10px);
+filter: blur(10px);
+}
+#imagen2, #imagen4, #imagen6{
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+#imagen3{
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+footer{
+background-color:  #C6d5c5;
+color:black;
+width: 100%;
+border-radius: 0 0 10px 10px;
+}
+
+.pie{
+  display: flex;
+  flex-direction: row;
+}
+
+.pie section{
+  margin-left: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+}
+.redes{
+  width: 15px;
+  height: 15px;
+}
+/**MEDIA QUERIES****************************/
+
+@media screen and (max-width:900px)
+{
+    #encabezado{
+        text-align:center;
+        height: 100%;
+        margin:0;
+        padding: 0;
+    }
+    header{
+      height: auto;
+    }
+    nav{
+        display: block;
+        margin:0;
+        text-align:center;
+    }
+    #contenedor{
+      width: 100%;
+      margin:0;
+    }
+    #contenido
+    {
+      width: 100%;
+      margin: 0 auto;
+    }
+  #central figure img{
+    width: 90%;
+    height: 50%;
+   }
+
+  #secundaria{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #secundaria figure {
+    width: 80%;
+    height: 80%;
+  }
+
+  #galeria .contenedorimg img{/*tamaño imagenes galeria */  
+    /* margin:10px; */
+    margin-top: 15px;
+    width: 80%;
+    height: 80%;  
+  } 
+
+  #galeria{
+    padding:15px;
+  }
+  .contenedorimg{
+    padding:0;
+    display: flex;
+    flex-direction: column;    
+  }
+}
+
+@media screen and (max-width: 680px){
+
+  #contenido{
+    width: 100%;
+    margin:0 auto;
+  }
+
+  #central #imagencentral img{
+	  width: 100%;
+    height: auto;
+  }
+
+	#secundariaIzq{
+	  width: 100%;
+  }
+  #secundariaDer{
+	  width: 100%;
+	}
+
+  #secundaria figure img{
+    width: 100%;
+    height: auto;
+  } 
+
+  .pie{
+    display: flex;
+    flex-direction: column;
+  }
+
+	/* header
+	{
+	width:100%;
+	} */
+}
